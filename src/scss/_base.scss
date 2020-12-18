@@ -21,7 +21,8 @@ body {
 }
 
 .wrapper {
-    width: 1000px;
+    // margin: auto;
+    max-width: 1000px;
     height: 914px;
     background-color: $bg;
     padding: 60px 170px 100px;  
@@ -30,7 +31,7 @@ body {
 .container {
     height: 100%;
     padding: 0 20px;
-    min-width: 660px;
+    // max-width: 660px;
 
     &_skills {
         padding: 0 0 0 20px;

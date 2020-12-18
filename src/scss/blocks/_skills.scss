@@ -5,25 +5,59 @@
         font-size: 18px;
         font-weight: 500;
         line-height: 22.01px;
-    
     }
 
     &__wrapper {
-        width: auto;
+        width: 100%;
         height: 137px;
-        margin-top: 21px;
         display: grid;
-        display: -ms-grid;
+        margin-top: 22px;
         grid-template-columns: repeat(4, 1fr);
-        -ms-grid-columns: 1fr 1fr 1fr 1fr;     
-        grid-template-rows: repeat(3, 19px);
-        -ms-grid-rows: 19px 19px 19px;   
-        row-gap: 40px;    
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;    
+
+        :nth-child(1) {
+            -ms-grid-column: 1;
+        }
+        :nth-child(2) {
+            -ms-grid-column: 3;
+        }
+        :nth-child(3) {
+            -ms-grid-column: 5;
+        }
+        :nth-child(4) {
+            -ms-grid-column: 7;
+        }
+        
+        div {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            row-gap: 40px;   
+            grid-template-rows: repeat(3, 19px);
+            display: -ms-grid;
+            -ms-grid-rows: 20px 25px 20px 25px 20px; 
+
+            :nth-child(1) {
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+            }
+            :nth-child(2) {
+                -ms-grid-row: 3;
+                -ms-grid-column: 1;
+            }
+            :nth-child(3) {
+                -ms-grid-row: 5;
+                -ms-grid-column: 1;
+            }
+        }
+       
     }
 
     &__item {
         position: relative;
         display: flex;
+        display: block !important;
         justify-content: flex-start;
         align-items: center;
         
@@ -41,15 +75,18 @@
             letter-spacing: 1.25px;
             display: block;
             text-align: center;
-            transition: all .8s;
+            transition: all .4s;
         }
 
         input {
             cursor: pointer;
             position: absolute;
+            // width: 20px;
+            // height: 20px;
             opacity: 0;
-
+            
             &:checked + label {
+                transition: all .8s;
                 &:before {
                     background-color: $blue;
                     background-image: url("../icons/check.svg");
