@@ -1,0 +1,46 @@
+.id {
+    padding: 30px 0 32px 0;
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__photo {
+        width: 138px;
+        height: 138px;
+    }
+
+    &__info {
+        width: 460px;
+        height: 188px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-item {
+            position: relative;
+            color: #666666;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 11.1px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1.23px;  
+            padding-bottom: 8px;
+            border-bottom: 2px solid  #333333;
+        }
+
+        :nth-child(3) {
+            margin-top: 2px;
+        }
+    }
+    
+    &__mark {
+        position: absolute;
+        bottom: -21px;
+        right: -16px;
+    }
+}
+ 

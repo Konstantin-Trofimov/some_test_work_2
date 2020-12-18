@@ -1,0 +1,62 @@
+html { 
+    height: auto; 
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    height: 100%;
+}
+
+.wrapper {
+    width: 1000px;
+    height: 914px;
+    background-color: $bg;
+    padding: 60px 170px 100px;  
+}
+
+.container {
+    height: 100%;
+    padding: 0 20px;
+    min-width: 660px;
+
+    &_skills {
+        padding: 0 0 0 20px;
+    }
+}
+
+.id, .skills, .meter {
+    height: 252px;
+}
+
+.id, .skills {
+    background-image: url('../img/bg.png');
+    border-bottom: 2px solid $bg; 
+}
+
+.meter { 
+    background-image: url('../img/bg_bottom.png');
+}
+
+input{
+    &:active, &:hover, &:focus {
+        outline: 0;
+        outline-offset: 0;
+    }    
+}
+
+header, footer, section {
+    display: block;
+}

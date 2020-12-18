@@ -1,0 +1,63 @@
+.meter {
+    padding: 58px  0  65px 0; 
+
+    &__wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__counter {
+        position: relative;
+        
+
+        &-arrow {
+            position: absolute;
+            transition: all .9s;
+            bottom: -133px;
+            left: 83px;
+        }
+
+        &-item {
+            position: absolute;
+
+            &_low {
+                left: 0;
+                top: 27px;
+            }
+            &_middle {
+                top: 0px;
+                left: 55px;
+            }
+            &_high {
+                top: 27px;
+                left: 171px;
+            }
+        }
+
+    }
+    
+    &__info {
+        margin-right: 101px;
+    }
+
+    &__title {
+        margin-top: 5px;
+        width: 198px;
+        color: $dark;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    &__result {
+        margin-top: 14px;
+        margin-left: -3px;
+        line-height: 50px;
+        color: $blue;
+        font-size: 50px;
+        font-weight: 900;
+        letter-spacing: 1.1px;
+    }
+}
