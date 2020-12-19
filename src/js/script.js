@@ -1,7 +1,7 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', function () {
-  var skills = document.querySelectorAll('.skills__item-cbx'),
+  var skills = Array.from(document.querySelectorAll('.skills__item-cbx')),
       out = document.querySelector('.meter__result');
   var counter = 0;
 
