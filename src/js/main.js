@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (elem.checked) {
 			counter += shift;
 		}
-		elem.addEventListener('input', () => {
+		elem.addEventListener('change', () => {
 			if (elem.checked) {
 				counter += shift;
 			} else {

@@ -1,7 +1,11 @@
 'use strict';
 
+require("core-js/modules/es.array.for-each");
+
+require("core-js/modules/web.dom-collections.for-each");
+
 window.addEventListener('DOMContentLoaded', function () {
-  var skills = Array.from(document.querySelectorAll('.skills__item-cbx')),
+  var skills = document.querySelectorAll('.skills__item-cbx'),
       out = document.querySelector('.meter__result');
   var counter = 0;
 
@@ -46,7 +50,7 @@ window.addEventListener('DOMContentLoaded', function () {
       counter += shift;
     }
 
-    elem.addEventListener('input', function () {
+    elem.addEventListener('change', function (event) {
       if (elem.checked) {
         counter += shift;
       } else {
